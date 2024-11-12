@@ -1,0 +1,17 @@
+﻿@model FIAP_PROJETO_CSHARP.Models.Truck
+
+<h2>Excluir Caminhão</h2>
+
+<div class="alert alert-danger">
+    <h4>Tem certeza de que deseja excluir este caminhão?</h4>
+    <p><strong>Placa:</strong> @Model.PlateCode</p>
+    <p><strong>Motorista:</strong> @Model.Driver</p>
+    <p><strong>Data de Registro:</strong> @Model.RegistrationDate.ToString("dd/MM/yyyy")</p>
+    <p><strong>Localização:</strong> @Model.Location</p>
+</div>
+
+<form asp-action="DeleteConfirmed" method="post">
+    <input type="hidden" asp-for="Id" />
+    <button type="submit" class="btn btn-danger">Excluir</button>
+    <a asp-action="Index" class="btn btn-secondary">Cancelar</a>
+</form>
