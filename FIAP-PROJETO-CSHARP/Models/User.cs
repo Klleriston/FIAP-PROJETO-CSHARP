@@ -1,19 +1,26 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace FIAP_PROJETO_CSHARP.Models
 {
+    [Table("USERS")] 
     public class User
     {
         [Key]
+        [Column("ID")]
         public long Id { get; set; }
-        [Required(ErrorMessage = "Nome de usuario é obrigatorio !")]
-        public string Userame { get; set; }
-        [Required(ErrorMessage = "Email é obrigatorio !")]
-        [EmailAddress]
-        public string Email { get; set; }
-        [Required(ErrorMessage = "Senha é obrigatoria !")]
-        public string Password { get; set; }
 
-        public List<string> Roles { get; set; } = new List<string>();
+        [Required(ErrorMessage = "Nome de usuario é obrigatorio!")]
+        [Column("USERNAME")]
+        public string Username { get; set; }
+
+        [Required(ErrorMessage = "Email é obrigatorio!")]
+        [EmailAddress]
+        [Column("EMAIL")]
+        public string Email { get; set; }
+
+        [Required(ErrorMessage = "Senha é obrigatoria!")]
+        [Column("PASSWORD")]
+        public string Password { get; set; }
     }
 }
