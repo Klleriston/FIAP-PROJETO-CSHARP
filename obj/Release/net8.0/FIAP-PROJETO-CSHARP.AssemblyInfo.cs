@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("FIAP-PROJETO-CSHARP")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4612d1044c786cde025a575fddf3e6d4d74721b5")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+47c91d9ffc05af5d565df97327622e3b3f82b6d8")]
 [assembly: System.Reflection.AssemblyProductAttribute("FIAP-PROJETO-CSHARP")]
 [assembly: System.Reflection.AssemblyTitleAttribute("FIAP-PROJETO-CSHARP")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
