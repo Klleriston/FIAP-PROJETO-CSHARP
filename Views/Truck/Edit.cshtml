@@ -1,0 +1,35 @@
+﻿@model FIAP_PROJETO_CSHARP.Models.Truck
+
+<h2>Editar Caminhão</h2>
+
+<form asp-action="Edit" method="post" class="container mt-5">
+    <input type="hidden" asp-for="Id" />
+    <div class="form-group">
+        <label asp-for="PlateCode" class="form-label"></label>
+        <input asp-for="PlateCode" class="form-control" />
+        <span asp-validation-for="PlateCode" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Driver" class="form-label"></label>
+        <input asp-for="Driver" class="form-control" />
+        <span asp-validation-for="Driver" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="RegistrationDate" class="form-label"></label>
+        <input asp-for="RegistrationDate" type="date" class="form-control" />
+        <span asp-validation-for="RegistrationDate" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Location" class="form-label"></label>
+        <input asp-for="Location" class="form-control" />
+        <span asp-validation-for="Location" class="text-danger"></span>
+    </div>
+    <button type="submit" class="btn btn-primary">Salvar Alterações</button>
+    <a asp-action="Index" class="btn btn-secondary">Cancelar</a>
+</form>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
