@@ -31,11 +31,11 @@ namespace FIAP_PROJETO_CSHARP.Controllers
                 if (user != null && VerifyPassword(model.Password, user.Password))
                 {
                     var claims = new List<Claim>
-            {
-                new Claim(ClaimTypes.NameIdentifier, user.Id.ToString()),
-                new Claim(ClaimTypes.Name, user.Username),
-                new Claim(ClaimTypes.Email, user.Email)
-            };
+                    {
+                        new Claim(ClaimTypes.NameIdentifier, user.Id.ToString()),
+                        new Claim(ClaimTypes.Name, user.Username),
+                        new Claim(ClaimTypes.Email, user.Email)
+                    };
 
                     var claimsIdentity = new ClaimsIdentity(claims, "CookieAuth");
 
