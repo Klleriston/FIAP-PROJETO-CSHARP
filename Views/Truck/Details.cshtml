@@ -1,0 +1,14 @@
+﻿@model FIAP_PROJETO_CSHARP.Models.Truck
+
+<h2>Detalhes do Caminhão</h2>
+
+<div class="card">
+    <div class="card-body">
+        <h5 class="card-title">Placa: @Model.PlateCode</h5>
+        <p><strong>Motorista:</strong> @Model.Driver</p>
+        <p><strong>Data de Registro:</strong> @Model.RegistrationDate.ToString("dd/MM/yyyy")</p>
+        <p><strong>Localização:</strong> @Model.Location</p>
+        <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-warning">Editar</a>
+        <a asp-action="Index" class="btn btn-secondary">Voltar para a Lista</a>
+    </div>
+</div>
